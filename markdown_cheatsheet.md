@@ -1,6 +1,6 @@
 # Markdown Cheatsheet
 
-## Headings
+### Headings
 
 ```markdown
 # H1
@@ -11,17 +11,20 @@
 ###### H6
 ```
 
-## Emphasis
+### Emphasis
 
 ```markdown
 *Italic* or _Italic_
 **Bold** or __Bold__
 ***Bold and Italic***
+~~Strikethrough~~
 ```
 
-## Lists
+### Lists
 
-### Unordered
+Indent two spaces for sublist
+
+#### Unordered
 
 ```markdown
 - Item 1
@@ -30,7 +33,16 @@
   - Subitem 2
 ```
 
-### Ordered
+Or
+
+```markdown
+* Item 1
+* Item 2
+  * Subitem 1
+  * Subitem 2
+```
+
+#### Ordered
 
 ```markdown
 1. First
@@ -38,27 +50,47 @@
 3. Third
 ```
 
-## Links
+### Links
 
 ```markdown
-[OpenAI](https://www.openai.com)
+[some text](https://www.your-website.com)
 ```
 
-## Images
+### Images
 
 ```markdown
 ![Alt Text](https://example.com/image.jpg)
 ```
 
-## Code
+## Linking to Headings (anchors)
 
-### Inline Code
+You can create links to headings within the same Markdown document using anchor links.
+
+```markdown
+[Link Text](#heading-text)
+```
+
+Where `#heading-text` is the slugified version of the heading.
+
+### Slugification Rules (as commonly used by GitHub and others)
+
+| Rule                                                  | Example                                   |
+| ----------------------------------------------------- | ----------------------------------------- |
+| Lowercase everything                                  | `## My Heading` → `#my-heading`           |
+| Remove punctuation                                    | `## Hello, World!` → `#hello-world`       |
+| Replace spaces with dashes                            | `## Getting Started` → `#getting-started` |
+| Collapse multiple spaces to one dash                  | `## A  B` → `#a-b`                        |
+| Remove special characters (each space becomes a dash) | `## C# & .NET` → `#c--net`                |
+
+### Code
+
+#### Inline Code
 
 ```markdown
 Here is some `inline code`.
 ```
 
-### Code Block
+#### Code Block
 
 <pre>
 ```python
@@ -67,19 +99,34 @@ def hello():
 ```
 </pre>
 
-## Blockquotes
+### Common Language Identifiers
+
+| Language     | Identifier         | Language | Identifier     |
+| ------------ | ------------------ | -------- | -------------- |
+| Bash / Shell | `bash`, `sh`       | C        | `c`            |
+| Python       | `python`           | C++      | `cpp`          |
+| JavaScript   | `javascript`, `js` | C#       | `csharp`, `cs` |
+| TypeScript   | `typescript`, `ts` | PHP      | `php`          |
+| HTML         | `html`             | Ruby     | `ruby`         |
+| CSS          | `css`              | Go       | `go`           |
+| JSON         | `json`             | Rust     | `rust`         |
+| YAML         | `yaml`, `yml`      | SQL      | `sql`          |
+| Markdown     | `markdown`         | Swift    | `swift`        |
+| Java         | `java`             |          |                |
+
+### Blockquotes
 
 ```markdown
-> This is a quote.
+> This is a block quote.
 ```
 
-## Horizontal Rule
+### Horizontal Rule
 
 ```markdown
 ---
 ```
 
-## Tables
+### Tables
 
 Explanation:
     Each row of the table is written on a new line.
@@ -97,9 +144,16 @@ Explanation:
 | Cell   | Text        |
 ```
 
-## Task Lists
+### Task Lists
 
 ```markdown
 - [x] Task 1
 - [ ] Task 2
+```
+
+### Footnotes
+
+```markdown
+This is a sentence with a footnote.[^1]
+[^1]: This is the footnote text.
 ```
