@@ -36,3 +36,4 @@
 15. `git push -f eumaios1212 pr/something`
     - Force pushes the squashed commits to the `pr/something` branch in the `eumaios1212` remote repository
     - The force push (`-f`) overwrites the history of the branch with the squashed commits
+16. When merging PRs on Github, always use a simple merge strategy: neither Squash & merge nor Rebase & marge.
