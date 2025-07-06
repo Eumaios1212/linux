@@ -21,7 +21,7 @@
 9. `pr/something` isn't merged for a while and may conflict with `origin/dev`
 10. `git fetch origin`
     - Fetches the latest changes (if any) from the `origin` remote repository
-    - If `git fetch origin` explicitly notes a merge conflict, proceed to rebase
+    - If `git fetch origin` explicitly notes a merge conflict, proceed to rebase (otherwise do not rebase)
 11. `git rebase origin/dev`
     - Rebases the current `pr/something` branch onto `origin/dev`, applying changes on top of the latest changes on
       `origin/dev`
