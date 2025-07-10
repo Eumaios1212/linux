@@ -25,6 +25,10 @@
 11. `git rebase origin/dev`
     - Rebases the current `pr/something` branch onto `origin/dev`, applying changes on top of the latest changes on
       `origin/dev`
+      - `git status` shows which files need reconciling.
+      - Reconcile `filename` with text editor
+      - `git add filename`
+      -  `git rebase --continue`
 12. `git push -f eumaios1212 pr/something`  
     - Force pushes the rebased branch to the `pr/something` branch in the `eumaios1212` remote repository
     - The force push (`-f`) overwrites the history of the branch with the rebased commits
