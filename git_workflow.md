@@ -1,5 +1,7 @@
-### Git Workflow for Hummingbot Project  
+# Git Workflow for Hummingbot Project  
+
 **origin** == Homeric-Freedom Org repo  
+
 **eumaios1212** == eumaios1212 personal repo
 
 1. `git fetch origin` (from any branch in local hummingbot repo)
@@ -28,7 +30,7 @@
       - `git status` shows which files need reconciling.
       - Reconcile `filename` with text editor
       - `git add filename`
-      -  `git rebase --continue`
+      - `git rebase --continue`
 12. `git push -f eumaios1212 pr/something`  
     - Force pushes the rebased branch to the `pr/something` branch in the `eumaios1212` remote repository
     - The force push (`-f`) overwrites the history of the branch with the rebased commits
